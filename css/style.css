@@ -1,0 +1,266 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-transform: capitalize;
+  font-family: prompt, sans-serif;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+:root {
+  --nav-backgorund: #1a2456;
+  --info: #efc2b3;
+  --font-color: #080b1b;
+  --main-tran: 0.3s;
+}
+
+.parent .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--nav-backgorund);
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 10px;
+  left: 0;
+  z-index: 1000;
+}
+
+.parent .nav .links {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 0.5;
+  flex-wrap: wrap;
+  margin-right: 50px;
+  position: relative;
+}
+
+.parent .nav .links a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--info);
+  transition: var(--main-tran);
+  -webkit-transition: var(--main-tran);
+  -moz-transition: var(--main-tran);
+  -ms-transition: var(--main-tran);
+  -o-transition: var(--main-tran);
+  margin: 7px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.parent .nav .links :nth-child(3)::after,
+.parent .nav .links a:last-of-type:after {
+  content: "";
+  position: absolute;
+  border-width: 7px;
+  border-color: var(--info) transparent transparent transparent;
+  border-style: solid;
+  top: 10px;
+  right: -17px;
+}
+
+.parent .nav .links a:hover {
+  text-decoration: underline;
+}
+
+.parent .content-first {
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://monogramcc.com/static/bc1b832a1fb02ad893c03ea2a7a73d05/c040c/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--info);
+}
+
+.parent .content-secand .large,
+.parent .content-thried .large {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  line-height: 1.6;
+  gap: 30px;
+  margin: 20px;
+  position: relative;
+}
+
+.parent .content-thried .large .specail,
+.parent .content-secand .large .specail {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.parent .content-thried .large .card,
+.parent .content-secand .large .card {
+  position: relative;
+}
+
+.parent .content-thried .large .card:not(.alone)::after,
+.parent .content-secand .large .card::after {
+  position: absolute;
+  content: "pre-order";
+  top: 30px;
+  right: 0px;
+  padding: 0 5px 0;
+  background-color: #ff8d6b;
+  font-weight: bold;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.parent .content-secand .card img {
+  width: 600px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.parent .content-thried .card .specail .tittle,
+.parent .content-secand .card .specail .tittle {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.parent .img-3 {
+  padding: 30px 0 0;
+  line-height: 1.6;
+  text-align: center;
+  background: url(https://monogram-project.netlify.app/images/shop-banner-module.webp);
+  height: 100vh;
+  width: 100%;
+  margin: 40px 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 15px 0;
+}
+
+.parent .content-thried .large .card img {
+  width: 390px;
+  height: 300px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.parent .content-thried .large .alone::before {
+  content: "shop now";
+  position: absolute;
+  background-color: var(--nav-backgorund);
+  color: white;
+  padding: 5px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  bottom: 0;
+  right: 0;
+  visibility: hidden;
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+}
+
+.parent .content-thried .large .alone:hover:before {
+  visibility: visible;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: var(--nav-backgorund);
+  padding: 15px;
+}
+
+footer div .big {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+footer div a {
+  color: var(--info);
+  text-decoration: none;
+  transition: var(--main-tran);
+  -webkit-transition: var(--main-tran);
+  -moz-transition: var(--main-tran);
+  -ms-transition: var(--main-tran);
+  -o-transition: var(--main-tran);
+}
+
+footer div a:hover {
+  text-decoration: underline;
+}
+
+footer .distinct .inputs input:first-child {
+  background-color: transparent;
+  color: white;
+}
+
+footer .distinct .inputs input:last-child {
+  font-weight: bold;
+  width: 80px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  background-color: var(--info);
+}
+
+footer div {
+  margin: 5px;
+  color: var(--info);
+}
+
+footer .distinct .inputs input {
+  padding: 5px;
+  outline: none;
+  border: 2px solid var(--info);
+}
+
+footer .social i {
+  font-size: 20px;
+  background-color: var(--info);
+  padding: 5px;
+  color: var(--nav-backgorund) !important;
+  margin: 0 5px;
+  color: var(--info);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+
+@media(max-width:600px) {
+
+  .parent .content-thried .large .card img,
+  .parent .content-secand .large .card img {
+    width: 335px;
+  }
+
+  .parent .content-secand .large .card::after {
+    right: 15px;
+  }
+}
